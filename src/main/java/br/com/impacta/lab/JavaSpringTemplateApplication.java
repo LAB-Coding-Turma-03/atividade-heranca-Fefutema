@@ -51,8 +51,17 @@ public class JavaSpringTemplateApplication {
 		Conta cc = new ContaCorrente(10, 1, "CC");
 		Conta cp = new ContaPoupanca(5, 12, "CP");
 		
-		System.out.println(cc.montarResumoDaConta());
+		//System.out.println(cc.montarResumoDaConta());
+		System.out.println("Primeiro Resumo");
 		System.out.println(cp.montarResumoDaConta());
+
+
+		System.out.println("Segundo Resumo");
+		ContaPoupanca cPoupanca = (ContaPoupanca) cp;
+		cPoupanca.alteraAgencia(150);
+
+		System.out.println(cp.montarResumoDaConta());
+
 	}
 
 }
